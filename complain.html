@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Grid Form Layout</title>
+    <link rel="stylesheet" href="complain.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h1>Complain Form</h1>
+        </div>
+        <form id="formWithoutGrid">
+            <!-- Anonymous Toggle -->
+            <div class="form-section">
+                <div class="anonymous-toggle">
+                    <div class="toggle-switch">
+                        <span>Submit Anonymously</span>
+                        <div class="switch" id="anonymousToggle">
+                            <div class="switch-slider"></div>
+                        </div>
+                    </div>
+                    <p style="margin-top: 10px; color: #aaa; font-size: 13px;">
+                        Turn on to submit without personal details
+                    </p>
+                </div>
+            </div>
+
+            <!-- Personal Information -->
+            <div class="form-section" id="personalInfoSection">
+                <h2 class="section-title">Personal Information</h2>
+
+                <div class="form-group">
+                    <label for="fullName">Full Name <span class="required">*</span></label>
+                    <input type="text" id="fullName" name="fullName" class="form-control" placeholder="Enter full name"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="your@email.com"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="+91 1234567890"
+                        required>
+                </div>
+            </div>
+
+            <!-- Complaint -->
+            <div class="form-section">
+                <h2 class="section-title">Complain</h2>
+
+                <div class="form-group">
+                    <label for="comments">Write Your Complaint in Brief</label>
+                    <textarea id="comments" name="comments" class="form-control"
+                        placeholder="Share your complaint..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="documents">Upload Documents (Optional)</label>
+                    <div class="file-upload">
+                        <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                            multiple>
+                        <div class="file-upload-content">
+                            <span>📄</span>
+                            <div>Click to upload or drag and drop</div>
+                            <small>Supported formats: PDF, DOC, DOCX, JPG, PNG (Max 5MB)</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="form-actions">
+                <button type="button" class="btn btn-secondary">Reset Form</button>
+                <button type="submit" class="btn btn-primary">Submit Application</button>
+            </div>
+        </form>
+    </div>
+    <script src="complainForm.js"></script> <!--javascript for complain form-->
+</body>
+</html>

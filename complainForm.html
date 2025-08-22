@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Grid Form Layout</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h1>Complain Form</h1>
+        </div>
+
+        <div class="form-content">
+            <form id="gridForm">
+                <!-- Anonymous Toggle -->
+                <div class="form-section">
+                    <div class="anonymous-toggle">
+                        <div class="toggle-switch">
+                            <span>Submit Anonymously</span>
+                            <div class="switch" id="anonymousToggle">
+                                <div class="switch-slider"></div>
+                            </div>
+                        </div>
+                        <p style="margin-top: 10px; color: #6c757d; font-size: 14px;">
+                            Turn on to submit without personal details
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Personal Information Section -->
+                <div class="form-section" id="personalInfoSection">
+                    <h2 class="section-title">Personal Information</h2>
+                    <div class="form-grid" id="personalInfo">
+                        <div class="form-group col-6 fade-in">
+                            <label for="firstName">First Name <span class="required">*</span></label>
+                            <div class="input-icon">
+                                <input type="text" id="firstName" name="firstName" class="form-control"
+                                    placeholder="Enter first name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-6 fade-in">
+                            <label for="lastName">Last Name <span class="required">*</span></label>
+                            <div class="input-icon">
+                                <input type="text" id="lastName" name="lastName" class="form-control"
+                                    placeholder="Enter last name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-6 fade-in">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <div class="input-icon">
+                                <input type="email" id="email" name="email" class="form-control"
+                                    placeholder="your@email.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-6 fade-in">
+                            <label for="phone">Phone Number <span class="required">*</span></label>
+                            <div class="input-icon">
+                                <input type="tel" id="phone" name="phone" class="form-control"
+                                    placeholder="+91 1234567890" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-4 fade-in">
+                            <label for="birthDate">Date of Birth</label>
+                            <input type="date" id="birthDate" name="birthDate" class="form-control">
+                        </div>
+
+                        <div class="form-group col-4 fade-in">
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender" class="form-control">
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                                <option value="prefer-not-to-say">Prefer not to say</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-4 fade-in">
+                            <label for="nationality">Nationality</label>
+                            <select id="nationality" name="nationality" class="form-control">
+                                <option value="">Select Country</option>
+                                <option value="us">United States</option>
+                                <option value="ca">Canada</option>
+                                <option value="uk">United Kingdom</option>
+                                <option value="in">India</option>
+                                <option value="au">Australia</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Address Information Section -->
+                <div class="form-section" id="addressInfoSection">
+                    <h2 class="section-title">Address Information</h2>
+                    <div class="form-grid" id="addressInfo">
+                        <div class="form-group col-12 fade-in">
+                            <label for="address">Address <span class="required">*</span></label>
+                            <input type="text" id="address" name="address" class="form-control"
+                                placeholder="Enter Address" required>
+                        </div>
+
+                        <div class="form-group col-6 fade-in">
+                            <label for="city">City <span class="required">*</span></label>
+                            <input type="text" id="city" name="city" class="form-control" placeholder="Enter city"
+                                required>
+                        </div>
+
+                        <div class="form-group col-3 fade-in">
+                            <label for="state">State/Province</label>
+                            <input type="text" id="state" name="state" class="form-control" placeholder="State">
+                        </div>
+
+                        <div class="form-group col-3 fade-in">
+                            <label for="zipCode">ZIP/Postal Code</label>
+                            <input type="text" id="zipCode" name="zipCode" class="form-control" placeholder="12345">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Additional Information Section -->
+                <div class="form-section">
+                    <h2 class="section-title">Complain</h2>
+                    <div class="form-grid">
+                        <div class="form-group col-12 fade-in">
+                            <label for="comments">Write Your Complaint in Brief</label>
+                            <textarea id="comments" name="comments" class="form-control"
+                                placeholder="Share Your Complain you'd like us to know..."></textarea>
+                        </div>
+
+                        <div class="form-group col-12 fade-in">
+                            <label for="documents">Upload Documents (Optional)</label>
+                            <div class="file-upload">
+                                <input type="file" id="documents" name="documents"
+                                    accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" multiple>
+                                <div class="file-upload-content">
+                                    <span class="file-upload-icon">📄</span>
+                                    <div>Click to upload or drag and drop</div>
+                                    <small>Supported formats: PDF, DOC, DOCX, JPG, PNG (Max 5MB per file)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Actions -->
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary">Reset Form</button>
+                    <button type="submit" class="btn btn-primary">Submit Application</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('gridForm');
+        const progressFill = document.getElementById('progressFill');
+        const formGroups = document.querySelectorAll('.form-group');
+        const anonymousToggle = document.getElementById('anonymousToggle');
+        const personalInfoSection = document.getElementById('personalInfoSection');
+        const addressInfoSection = document.getElementById('addressInfoSection');
+
+        let isAnonymous = false;
+
+        // Anonymous toggle functionality
+        anonymousToggle.addEventListener('click', function () {
+            isAnonymous = !isAnonymous;
+            this.classList.toggle('active');
+
+            if (isAnonymous) {
+                // Hide personal and address information
+                personalInfoSection.style.display = 'none';
+                addressInfoSection.style.display = 'none';
+
+                // Remove required attributes from hidden fields
+                const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'address', 'city'];
+                requiredFields.forEach(fieldId => {
+                    const field = document.getElementById(fieldId);
+                    if (field) {
+                        field.removeAttribute('required');
+                        field.value = ''; // Clear the field
+                    }
+                });
+
+                // Show notification
+                showNotification('✅ Anonymous mode enabled. Personal information fields are now hidden.', 'success');
+            } else {
+                // Show personal and address information
+                personalInfoSection.style.display = 'block';
+                addressInfoSection.style.display = 'block';
+
+                // Add back required attributes
+                const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'address', 'city'];
+                requiredFields.forEach(fieldId => {
+                    const field = document.getElementById(fieldId);
+                    if (field) {
+                        field.setAttribute('required', '');
+                    }
+                });
+
+                // Show notification
+                showNotification('ℹ️ Anonymous mode disabled. Please fill in your personal information.', 'info');
+            }
+
+            // Update progress after toggling
+            updateProgress();
+        });
+
+        // Notification function
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 15px 20px;
+                border-radius: 10px;
+                color: white;
+                font-weight: 600;
+                z-index: 10000;
+                animation: slideInRight 0.3s ease;
+                max-width: 300px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            `;
+
+            if (type === 'success') {
+                notification.style.background = 'linear-gradient(135deg, #27ae60, #2ecc71)';
+            } else if (type === 'info') {
+                notification.style.background = 'linear-gradient(135deg, #3498db, #2980b9)';
+            }
+
+            notification.textContent = message;
+            document.body.appendChild(notification);
+
+            // Remove notification after 4 seconds
+            setTimeout(() => {
+                notification.style.animation = 'slideOutRight 0.3s ease';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 300);
+            }, 4000);
+        }
+
+        // Add CSS animations for notifications
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideInRight {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOutRight {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Progress tracking
+        function updateProgress() {
+            const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
+            let filledInputs = 0;
+
+            inputs.forEach(input => {
+                if (input.type === 'checkbox' || input.type === 'radio') {
+                    if (input.checked) filledInputs++;
+                } else if (input.value.trim() !== '') {
+                    filledInputs++;
+                }
+            });
+
+            const progress = (filledInputs / inputs.length) * 100;
+            progressFill.style.width = progress + '%';
+        }
+
+        // Add event listeners to all form inputs
+        form.addEventListener('input', updateProgress);
+        form.addEventListener('change', updateProgress);
+
+        // File upload handling
+        const fileInput = document.getElementById('documents');
+        const fileUploadContent = document.querySelector('.file-upload-content');
+
+        fileInput.addEventListener('change', function (e) {
+            const files = e.target.files;
+            if (files.length > 0) {
+                fileUploadContent.innerHTML = `
+                    <span class="file-upload-icon">✅</span>
+                    <div>${files.length} file(s) selected</div>
+                    <small>Click to change files</small>
+                `;
+            } else {
+                fileUploadContent.innerHTML = `
+                    <span class="file-upload-icon">📄</span>
+                    <div>Click to upload or drag and drop</div>
+                    <small>Supported formats: PDF, DOC, DOCX, JPG, PNG (Max 5MB per file)</small>
+                `;
+            }
+        });
+
+        // Form submission
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+
+            submitBtn.textContent = '⏳ Processing...';
+            submitBtn.disabled = true;
+
+            // Simulate form processing
+            setTimeout(() => {
+                const submissionType = isAnonymous ? 'Anonymous submission' : 'Standard submission';
+                showNotification(`🎉 ${submissionType} completed successfully!`, 'success');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+
+        // Reset form
+        form.querySelector('.btn-secondary').addEventListener('click', function () {
+            if (confirm('Are you sure you want to reset the form? All data will be lost.')) {
+                form.reset();
+
+                // Reset anonymous toggle if it was enabled
+                if (isAnonymous) {
+                    anonymousToggle.click(); // This will toggle it back to normal mode
+                }
+
+                updateProgress();
+                fileUploadContent.innerHTML = `
+                    <span class="file-upload-icon">📄</span>
+                    <div>Click to upload or drag and drop</div>
+                    <small>Supported formats: PDF, DOC, DOCX, JPG, PNG (Max 5MB per file)</small>
+                `;
+
+                showNotification('🔄 Form has been reset successfully.', 'info');
+            }
+        });
+
+        // Animate form groups on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        formGroups.forEach(group => {
+            observer.observe(group);
+        });
+
+        // Initialize progress
+        updateProgress();
+    </script>
+</body>
+
+</html>

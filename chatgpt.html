@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - My App</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #000000;
+        }
+
+        /* Container */
+        .login-box {
+            width: 100%;
+            max-width: 380px;
+            background: #000000;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border: 2px solid #fff;
+        }
+
+        .logo {
+            width: 60px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        p {
+            font-size: 0.9rem;
+            color: #d1d4dc;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Form */
+        .form-group {
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+        label {
+            font-size: 0.9rem;
+            color: #d1d4dc;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #10b981;
+            box-shadow: 0 0 0 3px rgba(190, 249, 229, 0.651);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            background: #10b981;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #059669;
+        }
+
+        /* Forgot password link */
+        .forgot {
+            text-align: right;
+            margin-top: 5px;
+        }
+
+        .forgot a {
+            font-size: 0.85rem;
+            color: #10b981;
+            text-decoration: none;
+        }
+
+        .forgot a:hover {
+            text-decoration: underline;
+        }
+
+        /* Divider */
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 1.5rem 0;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #d1d5db;
+            margin: 0 10px;
+        }
+
+        /* Social Buttons */
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 10px;
+            background: #fff;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-bottom: 10px;
+        }
+
+        .social-btn:hover {
+            background: #f9fafb;
+        }
+
+        .social-btn img {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Signup Redirect */
+        .signup {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+
+        .signup a {
+            color: #10b981;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .signup a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+        <!-- Logo -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="Logo" class="logo">
+
+        <!-- Title -->
+        <h2>Welcome Back</h2>
+        <p>Log in to continue</p>
+
+        <!-- Form -->
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+
+            <!-- Forgot Password -->
+            <div class="forgot">
+                <a href="#">Forgot password?</a>
+            </div>
+
+            <button type="submit">Continue</button>
+        </form>
+
+        <!-- Divider -->
+        <div class="divider">or</div>
+
+        <!-- Social Login -->
+        <button class="social-btn">
+            <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google">
+            Continue with Google
+        </button>
+        <button class="social-btn">
+            <img src="https://www.svgrepo.com/show/448234/github.svg" alt="GitHub">
+            Continue with GitHub
+        </button>
+
+        <!-- Signup -->
+        <div class="signup">
+            Don’t have an account? <a href="#">Sign up</a>
+        </div>
+    </div>
+
+    <script>
+        // Simple login check
+        const form = document.getElementById("loginForm");
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            if (email === "test@example.com" && password === "123456") {
+                alert("Login successful ✅");
+            } else {
+                alert("Invalid credentials ❌");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complaint & Feedback Portal</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+</head>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: #1e293b;
+  color: white;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.navbar ul li .btn {
+  background: #3b82f6;
+  padding: 8px 15px;
+  border-radius: 8px;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #3b82f6, #1e3a8a);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero p {
+  margin: 15px 0;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn.primary {
+  background: white;
+  color: #1e3a8a;
+  margin-right: 10px;
+}
+
+.btn.secondary {
+  background: #1e3a8a;
+  color: white;
+  border: 2px solid white;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 20px;
+  background: white;
+}
+
+.stat-card {
+  background: #e2e8f0;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  min-width: 150px;
+}
+
+.stat-card h2 {
+  color: #1e3a8a;
+}
+
+/* Features */
+.features {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.features h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.feature {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.feature i {
+  font-size: 2rem;
+  color: #3b82f6;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+  background: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+</style>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">ComplainBox</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#stats">Stats</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="login.html" class="btn">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Complaint & Feedback Portal</h1>
+    <p>Submit your complaint or feedback easily. Track progress and stay updated.</p>
+    <div class="hero-buttons">
+      <a href="complain.html" class="btn primary">Submit Complaint</a>
+      <a href="feedback.html" class="btn secondary">Give Feedback</a>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section id="stats" class="stats">
+    <div class="stat-card">
+      <h2>120+</h2>
+      <p>Total Complaints</p>
+    </div>
+    <div class="stat-card">
+      <h2>95+</h2>
+      <p>Solved</p>
+    </div>
+    <div class="stat-card">
+      <h2>25</h2>
+      <p>Pending</p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <h2>Why Use Our Portal?</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <i class="fa-solid fa-user-secret"></i>
+        <h3>Anonymous Option</h3>
+        <p>Submit complaints without revealing your identity.</p>
+      </div>
+      <div class="feature">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>Track Status</h3>
+        <p>Easily check the status of your complaint.</p>
+      </div>
+      <div class="feature">
+        <i class="fa-solid fa-comments"></i>
+        <h3>Feedback</h3>
+        <p>Give suggestions to improve our services.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <p>&copy; 2025 ComplainBox. All Rights Reserved.</p>
+    <p>Email: support@complainbox.com | Phone: +91 9876543210</p>
+  </footer>
+
+</body>
+</html>
